@@ -1,18 +1,20 @@
+import "./App.css";
+import GlobalContext from "./GlobalContext/context"; //used alias name for meaingful name
+import { useState } from "react";
+import Routing from "./Components/Routing/routing";
 
 import './App.css'
-import CoinTable from './Components/CoinTable/CoinTable'
-import Navbar from './Components/Navbar/Navbar'
-import Banner from './Components/Banner/Banner'
-function App() {
 
+function App() {
+  const [currency, setCurrency] = useState("inr");
 
   return (
     <>
-    <Navbar/>
-    <Banner/>
-<CoinTable/>
+      <GlobalContext.Provider value={{ currency, setCurrency }}>
+        <Routing />
+      </GlobalContext.Provider>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
