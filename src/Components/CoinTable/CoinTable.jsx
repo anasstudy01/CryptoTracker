@@ -20,7 +20,7 @@ function CoinTable() {
   });
 
  const handleCoinredirect=(id)=>{
-    navigate(`/details/:${id}`);
+    navigate(`/details/${id}`);
   }
 
 

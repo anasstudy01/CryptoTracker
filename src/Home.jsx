@@ -6,7 +6,7 @@ import Banner from './Components/Banner/Banner'
 function Home() {
   return (
    <>
-      <Navbar/>
+    
     <Banner/>
 <CoinTable/>
    </>
