@@ -8,7 +8,7 @@ function Routing() {
     <>
       <Routes>
         <Route path="/" element={<MainLayout />}>
-          <Route index element={<Home />} />
+          <Route index element={<Home />} /> 
           <Route path="/details/:coinid" element={<CoinDetailsPage />} />
         </Route>
       </Routes>
