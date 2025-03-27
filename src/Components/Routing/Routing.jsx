@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom";
 // import CoinDetailsPage from "../../pages/CoinDetailsPage";
 import MainLayout from "../../pages/Layout";
 import { lazy, Suspense } from "react";
+import ContentLoader, { Facebook } from "react-content-loader";
 
 const Home = lazy(() => import("../../Home"));
 const CoinDetailsPage = lazy(() => import("../../pages/CoinDetailsPage"));
@@ -14,14 +15,17 @@ function Routing() {
         <Route path="/" element={<MainLayout />}>
           <Route index element={
               <Suspense fallback={
-                  <div><h1>New Content is on the way...</h1></div> }>
+                  // <div><h1>New Content is on the way...</h1></div> 
+                  <ContentLoader/>
+                  }>
                 <Home />
               </Suspense>
             }
           />
           <Route    path="/details/:coinid" element={
               <Suspense fallback={
-                  <div>    <h1>New Content is on the way keep waiting...</h1> </div>  }>
+                  <Facebook /> 
+                  }> 
                 <CoinDetailsPage />
                  </Suspense>
             }
