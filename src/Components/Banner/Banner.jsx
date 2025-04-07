@@ -1,5 +1,5 @@
 import globalscope from "../../GlobalContext/context";
-import cover from "../Banner/Banner1.jpeg";
+import cover from "../../assets/banner1.jpeg"; // Corrected the path to match the actual folder and file names
 import { useContext } from "react";
 
 function Banner() {
